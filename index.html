@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Monikay's Kitchen — maquette Al-Falah</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']},colors:{ink:'#0f172a',teal:'#0d9488',gold:'#c9a227',cream:'#f8fafc'}}}}
+</script>
+<style>
+  html{scroll-behavior:smooth}
+  .lang-fr .en,.lang-en .fr{display:none}
+  .lang-fr .fr,.lang-en .en{display:revert}
+</style>
+</head>
+<body class="lang-en bg-cream text-ink font-sans antialiased">
+<div class="bg-amber-50 border-b border-amber-200 text-amber-950 text-sm text-center px-4 py-2">
+  <span class="en">Complimentary mockup by Al-Falah Marketing — nothing is live under your name.</span>
+  <span class="fr">Maquette offerte par Al-Falah Marketing — rien n’est en ligne sous votre nom.</span>
+</div>
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
+    <a href="#top" class="font-extrabold tracking-tight text-lg">Monikay's Kitchen</a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+      <a href="#menu" class="hover:text-teal"><span class="en">Menu</span><span class="fr">Carte</span></a>
+      <a href="#gallery" class="hover:text-teal"><span class="en">Gallery</span><span class="fr">Galerie</span></a>
+      <a href="#contact" class="hover:text-teal">Contact</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button id="langBtn" class="text-xs font-bold border border-slate-300 rounded-full px-3 py-1">EN / FR</button>
+      <a href="https://wa.me/12404761952" class="hidden sm:inline-flex bg-teal text-white text-sm font-semibold rounded-full px-4 py-2">WhatsApp</a>
+    </div>
+  </div>
+</header>
+<section id="top" class="relative min-h-[78vh] flex items-end text-white">
+  <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=1200&q=80" alt="" class="absolute inset-0 w-full h-full object-cover"/>
+  <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20"></div>
+  <div class="relative max-w-6xl mx-auto px-4 pb-14 pt-28">
+    <p class="text-gold font-semibold tracking-wide text-sm mb-3">West African kitchen · Laurel, MD</p>
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight max-w-3xl"><span class="en">Jollof, waakye and suya on Washington Blvd.</span><span class="fr">Jollof, waakye et suya sur Washington Blvd.</span></h1>
+    <p class="mt-4 max-w-xl text-lg text-slate-100"><span class="en">Family-owned Ghanaian and West African plates. Dine-in, pickup, and catering with notice.</span><span class="fr">Cuisine familiale ghanéenne et ouest-africaine. Sur place, à emporter, traiteur sur préavis.</span></p>
+    <div class="mt-7 flex flex-wrap gap-3">
+      <a href="https://wa.me/12404761952" class="bg-teal hover:bg-teal-700 text-white font-semibold rounded-full px-6 py-3">WhatsApp</a>
+      <a href="tel:+12404761952" class="bg-white/10 border border-white/40 rounded-full px-6 py-3 font-semibold"><span class="en">Call</span><span class="fr">Appeler</span> (240) 476-1952</a>
+    </div>
+  </div>
+</section>
+<section class="bg-ink text-white">
+  <div class="max-w-6xl mx-auto px-4 py-4 grid md:grid-cols-3 gap-3 text-sm">
+    <div><span class="text-gold font-semibold">Laurel, MD</span> · +1 240 280 6137</div>
+    <div><span class="text-gold font-semibold">Coyah, Guinée</span> · Orange Money / GNF · +224 611 351 302</div>
+    <div><span class="text-gold font-semibold">Freetown</span> · SLE · Al-Falah studio support</div>
+  </div>
+</section>
+<section id="menu" class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="text-3xl font-extrabold"><span class="en">What guests come for</span><span class="fr">Ce que les clients viennent chercher</span></h2>
+  <p class="mt-2 text-slate-600 max-w-2xl"><span class="en">Sample cards only. Confirm prices and the 9990 Washington Blvd N address before visiting.</span><span class="fr">Cartes d’exemple. Confirmez les prix et l’adresse 9990 Washington Blvd N.</span></p>
+  <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <button type="button" onclick="openCard('Waakye mix','Rice and beans, egg, fish or chicken, suya.')" class="text-left bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md">
+      <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1200&q=80" alt="" class="h-40 w-full object-cover"/>
+      <div class="p-4"><p class="font-bold">Waakye mix</p><p class="text-sm text-slate-600 mt-1">Rice and beans, egg, fish or chicken, suya.</p></div>
+    </button><button type="button" onclick="openCard('Beef suya','Grilled beef with jollof or fried rice.')" class="text-left bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md">
+      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80" alt="" class="h-40 w-full object-cover"/>
+      <div class="p-4"><p class="font-bold">Beef suya</p><p class="text-sm text-slate-600 mt-1">Grilled beef with jollof or fried rice.</p></div>
+    </button><button type="button" onclick="openCard('Check check','Jollof or fried rice, chicken, salad, shito.')" class="text-left bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-md">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80" alt="" class="h-40 w-full object-cover"/>
+      <div class="p-4"><p class="font-bold">Check check</p><p class="text-sm text-slate-600 mt-1">Jollof or fried rice, chicken, salad, shito.</p></div>
+    </button>
+  </div>
+</section>
+<section id="gallery" class="bg-white py-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold"><span class="en">Ambiance</span><span class="fr">Ambiance</span></h2>
+    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3">
+      <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1200&q=80" alt="" class="h-36 md:h-44 w-full object-cover rounded-2xl"/>
+<img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80" alt="" class="h-36 md:h-44 w-full object-cover rounded-2xl"/>
+<img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=1200&q=80" alt="" class="h-36 md:h-44 w-full object-cover rounded-2xl"/>
+<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" alt="" class="h-36 md:h-44 w-full object-cover rounded-2xl"/>
+    </div>
+    <p class="mt-3 text-xs text-slate-500"><span class="en">Photos are curated placeholders until the owner shares real shots.</span><span class="fr">Photos d’ambiance de substitution, en attendant les clichés du restaurant.</span></p>
+  </div>
+</section>
+<section class="max-w-6xl mx-auto px-4 py-16">
+  <h2 class="text-3xl font-extrabold"><span class="en">Why a page like this</span><span class="fr">Pourquoi une page comme celle-ci</span></h2>
+  <div class="mt-6 grid md:grid-cols-3 gap-4">
+    <div class="rounded-2xl bg-white p-5 shadow-sm border border-slate-100"><p class="text-2xl font-extrabold text-teal">Acile Coffee</p><p class="text-sm text-slate-600 mt-2"><span class="en">Al-Falah helped a West African café look bookable on mobile.</span><span class="fr">Al-Falah a aidé un café ouest-africain à être réservable sur mobile.</span></p></div>
+    <div class="rounded-2xl bg-white p-5 shadow-sm border border-slate-100"><p class="text-2xl font-extrabold text-teal">Shawarma Sam</p><p class="text-sm text-slate-600 mt-2"><span class="en">A clear menu and WhatsApp path, not just a Facebook page.</span><span class="fr">Une carte claire et un chemin WhatsApp, pas seulement Facebook.</span></p></div>
+    <div class="rounded-2xl bg-white p-5 shadow-sm border border-slate-100"><p class="text-2xl font-extrabold text-teal"><span class="en">Ask today’s prices</span><span class="fr">Prix du jour</span></p><p class="text-sm text-slate-600 mt-2"><span class="en">DoorDash shows sample items from about $21. Confirm in house.</span><span class="fr">DoorDash affiche des exemples dès environ 21 $. À confirmer.</span></p></div>
+  </div>
+</section>
+<section id="contact" class="bg-white border-t border-slate-200 py-16">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+    <div>
+      <h2 class="text-3xl font-extrabold">Contact</h2>
+      <p class="mt-3 text-slate-600">9990 Washington Blvd N, Laurel, MD 20723</p>
+      <p class="mt-2 font-semibold">(240) 476-1952</p>
+      <p class="text-sm text-slate-500 mt-1">monikayskitchen@gmail.com</p>
+      <a href="https://wa.me/12404761952" class="inline-flex mt-5 bg-teal text-white font-semibold rounded-full px-5 py-3">WhatsApp</a>
+    </div>
+    <form id="lead" class="bg-cream rounded-2xl p-5 border border-slate-200 space-y-3">
+      <input id="nm" class="w-full rounded-xl border border-slate-200 px-3 py-3" placeholder="Name / Nom"/>
+      <textarea id="msg" rows="3" class="w-full rounded-xl border border-slate-200 px-3 py-3" placeholder="Table / order"></textarea>
+      <button type="button" onclick="sendLead()" class="w-full bg-ink text-white rounded-xl py-3 font-semibold"><span class="en">Send on WhatsApp</span><span class="fr">Envoyer sur WhatsApp</span></button>
+    </form>
+  </div>
+</section>
+<footer class="bg-ink text-slate-300 text-sm py-10 pb-24">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-4">
+    <div>
+      <p class="text-white font-bold">Monikay's Kitchen</p>
+      <p class="mt-2">9990 Washington Blvd N, Laurel, MD 20723</p>
+    </div>
+    <div>
+      <p class="text-white font-semibold">Al-Falah Marketing</p>
+      <p>8468 Winding Trail, Laurel, MD 20724</p>
+      <p>+1 240 280 6137 · +224 611 351 302</p>
+      <p>info@al-falahmarketing.com · al-falahmarketing.com</p>
+      <p class="mt-2 text-xs">Review-only mockup. Privacy & terms available on request. Not a live client site.</p>
+    </div>
+  </div>
+</footer>
+<div class="fixed bottom-0 inset-x-0 z-40 md:hidden bg-white border-t border-slate-200 grid grid-cols-3 text-center text-sm font-semibold">
+  <a href="tel:+12404761952" class="py-3">Call</a>
+  <a href="https://wa.me/12404761952" class="py-3 text-teal">WhatsApp</a>
+  <a href="#menu" class="py-3">Menu</a>
+</div>
+<div id="modal" class="hidden fixed inset-0 z-50 bg-ink/70 p-4 flex items-end sm:items-center justify-center" onclick="if(event.target.id==='modal')this.classList.add('hidden')">
+  <div class="bg-white rounded-2xl max-w-md w-full p-5">
+    <h3 id="mTitle" class="text-xl font-extrabold"></h3>
+    <p id="mBody" class="mt-2 text-slate-600"></p>
+    <button class="mt-4 text-sm font-semibold" onclick="document.getElementById('modal').classList.add('hidden')">Close</button>
+  </div>
+</div>
+<script>
+const root=document.body;
+document.getElementById('langBtn').onclick=()=>{root.classList.toggle('lang-en');root.classList.toggle('lang-fr');};
+function openCard(t,b){document.getElementById('mTitle').textContent=t;document.getElementById('mBody').textContent=b;document.getElementById('modal').classList.remove('hidden');}
+function sendLead(){
+  const n=document.getElementById('nm').value||'';
+  const m=document.getElementById('msg').value||'';
+  const text=encodeURIComponent('Hello Monikay's Kitchen, I would like to order: '+n+' — '+m);
+  location.href='https://wa.me/12404761952?text='+text;
+}
+</script>
+</body>
+</html>
